@@ -1,1 +1,6 @@
-
+:host {
+  --some-value: green;
+}
+div {
+  background-color: var(--some-value);
+}
