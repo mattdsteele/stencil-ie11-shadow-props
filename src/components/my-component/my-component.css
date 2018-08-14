@@ -2,5 +2,6 @@
   --some-value: green;
 }
 div {
+  --some-value: blue;
   background-color: var(--some-value);
 }
