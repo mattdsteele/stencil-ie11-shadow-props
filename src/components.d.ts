@@ -11,9 +11,6 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface IeStyles {}
-  interface IeStylesAttributes extends StencilHTMLAttributes {}
-
   interface MyComponent {
     'first': string;
     'last': string;
@@ -26,21 +23,13 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'IeStyles': Components.IeStyles;
     'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
-    'ie-styles': Components.IeStylesAttributes;
     'my-component': Components.MyComponentAttributes;
   }
 
-
-  interface HTMLIeStylesElement extends Components.IeStyles, HTMLStencilElement {}
-  var HTMLIeStylesElement: {
-    prototype: HTMLIeStylesElement;
-    new (): HTMLIeStylesElement;
-  };
 
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
@@ -49,12 +38,10 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'ie-styles': HTMLIeStylesElement
     'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
-    'ie-styles': HTMLIeStylesElement;
     'my-component': HTMLMyComponentElement;
   }
 

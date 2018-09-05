@@ -6,14 +6,19 @@ import { Component, Prop } from '@stencil/core';
   shadow: true
 })
 export class MyComponent {
-
-  @Prop() first: string;
-  @Prop() last: string;
+  @Prop()
+  first: string;
+  @Prop()
+  last: string;
 
   render() {
     return (
       <div>
-        Hello, World! I'm {this.first} {this.last}
+        <p>
+          Hello, World! I'm {this.first} {this.last}
+        </p>
+        <slot />
+        <p>Content after the slot</p>
       </div>
     );
   }

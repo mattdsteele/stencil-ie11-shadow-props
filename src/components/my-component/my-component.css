@@ -1,7 +1,4 @@
 :host {
-  --some-value: green;
-}
-div {
-  --some-value: blue;
-  background-color: var(--some-value);
+  display: block;
+  border: 1px solid black;
 }

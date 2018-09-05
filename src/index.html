@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" mode="foo">
+<html dir="ltr" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -11,9 +11,20 @@
 
 <body>
 
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  <ie-styles></ie-styles>
-
+  <my-component first="Stencil" last="'Don't call me a framework' JS">
+    <p>Slotted content</p>
+    <select>
+      <option>Foo</option>
+      <option>Bar</option>
+      <option>Baz</option>
+    </select>
+  </my-component>
+  <my-component first="Foo" last="Bar">
+    <p>Normal content, no select element</p>
+  </my-component>
+  <my-component first="Foo" last="Bar">
+    <select></select>
+  </my-component>
 </body>
 
 </html>
